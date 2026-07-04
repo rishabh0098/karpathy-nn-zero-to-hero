@@ -1,0 +1,13 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.cursor/
+.DS_Store
