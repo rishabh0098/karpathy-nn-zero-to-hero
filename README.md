@@ -11,6 +11,10 @@ This repo captures progress after completing the **first lecture** (*Micrograd: 
   - Computation graph visualization with Graphviz
   - Manual and topological-sort backprop
   - Single-neuron and MLP examples with training loop setup
+- `micrograd_cold_rebuild.ipynb` — cold rebuild of micrograd without looking back at the original notes:
+  - Reimplemented `Value`, `Neuron`, `Layer`, and `MLP` from memory
+  - Unit tests for ops, mixed Value/scalar operands, layers, and the full MLP
+  - End-to-end training on the lecture toy dataset to verify forward + backward together
 
 ## Setup
 
