@@ -2,9 +2,11 @@
 
 Notes and exercises while following [Andrej Karpathy's Neural Networks: Zero to Hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI05v9XCA/G0wIecFHzbMW) series.
 
-This repo captures progress after completing the **first lecture** (*Micrograd: Explaining Backpropagation*), implemented step by step in a Jupyter notebook.
+This repo captures progress after completing the **first lecture** (*Micrograd: Explaining Backpropagation*), implemented step by step in Jupyter notebooks.
 
 ## Contents
+
+### `lecture-1/`
 
 - `micrograd_from_scratch_yay.ipynb` — building autograd and a tiny neural net from scratch:
   - `Value` class with forward ops (`+`, `*`, `/`, `**`, `tanh`, `exp`) and reverse-mode autograd
@@ -30,7 +32,7 @@ For Graphviz diagram rendering, install the system Graphviz binary as well:
 brew install graphviz   # macOS
 ```
 
-Then open the notebook in Jupyter or VS Code/Cursor and select the project `venv` kernel.
+Then open a notebook under `lecture-1/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
 
 ## Reference
 
