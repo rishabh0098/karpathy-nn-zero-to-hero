@@ -6,7 +6,7 @@ This repo captures progress after completing the **first lecture** (*Micrograd: 
 
 ## Contents
 
-### `lecture-1/`
+### `micrograd/`
 
 - `micrograd_from_scratch_yay.ipynb` — building autograd and a tiny neural net from scratch:
   - `Value` class with forward ops (`+`, `*`, `/`, `**`, `tanh`, `exp`) and reverse-mode autograd
@@ -32,7 +32,7 @@ For Graphviz diagram rendering, install the system Graphviz binary as well:
 brew install graphviz   # macOS
 ```
 
-Then open a notebook under `lecture-1/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
+Then open a notebook under `micrograd/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
 
 ## Reference
 
