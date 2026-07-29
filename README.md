@@ -36,5 +36,6 @@ Then open a notebook under `micrograd/` in Jupyter or VS Code/Cursor and select 
 
 ## Reference
 
+- Course repo: [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero)
 - Lecture: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
 - Original micrograd repo: [karpathy/micrograd](https://github.com/karpathy/micrograd)
