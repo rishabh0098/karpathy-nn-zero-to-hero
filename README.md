@@ -1,8 +1,8 @@
-# Karpathy NN Zero to Hero — Micrograd from Scratch
+# Karpathy NN Zero to Hero
 
 Notes and exercises while following [Andrej Karpathy's Neural Networks: Zero to Hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI05v9XCA/G0wIecFHzbMW) series.
 
-This repo captures progress after completing the **first lecture** (*Micrograd: Explaining Backpropagation*), implemented step by step in Jupyter notebooks.
+This repo captures progress through the lectures, implemented step by step in Jupyter notebooks.
 
 ## Contents
 
@@ -18,6 +18,17 @@ This repo captures progress after completing the **first lecture** (*Micrograd: 
   - Unit tests for ops, mixed Value/scalar operands, layers, and the full MLP
   - End-to-end training on the lecture toy dataset to verify forward + backward together
 
+### `makemore/`
+
+- `names.txt` — baby-name training data used by both notebooks
+- `build_makemore_yay.ipynb` — lecture walkthrough of a character-level bigram language model:
+  - Counting bigrams, converting counts to probabilities (with smoothing), and sampling names
+  - Negative log-likelihood as the training objective
+  - The same model as a one-layer neural net: one-hot inputs, softmax, NLL + L2, gradient descent
+- `makemore_cold_rebuild.ipynb` — cold rebuild of the bigram model without looking back at the original notes:
+  - Recounted bigrams, sampled from the count table, and scored NLL
+  - Retrained the neural-net version (softmax + L2) and sampled names from it
+
 ## Setup
 
 ```bash
@@ -26,16 +37,18 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-For Graphviz diagram rendering, install the system Graphviz binary as well:
+For Graphviz diagram rendering (micrograd notebooks), install the system Graphviz binary as well:
 
 ```bash
 brew install graphviz   # macOS
 ```
 
-Then open a notebook under `micrograd/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
+Then open a notebook under `micrograd/` or `makemore/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
 
 ## Reference
 
 - Course repo: [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero)
-- Lecture: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
+- Lecture 1: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
+- Lecture 2: [The spelled-out intro to language modeling: building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
 - Original micrograd repo: [karpathy/micrograd](https://github.com/karpathy/micrograd)
+- Original makemore repo: [karpathy/makemore](https://github.com/karpathy/makemore)
