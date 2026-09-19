@@ -36,6 +36,10 @@ This repo captures progress through the lectures, implemented step by step in Ju
   - Context window of 3 previous characters mapped through a learned embedding table
   - Hidden tanh layer + softmax over the next character, trained with negative log-likelihood
   - Train / val / test splits, learning-rate search, and sampling names from the trained model
+- `makemore_mlp_cold_rebuild.ipynb` — cold rebuild of the MLP without looking back at the original notes:
+  - Rebuilt the 3-character context dataset with train / val / test splits
+  - Retrained the embedding + tanh + softmax model (cross-entropy, minibatch SGD, learning-rate decay)
+  - Evaluated train and validation loss
 - `A Neural Probabilistic Language Model.pdf` — Bengio et al. 2003 paper this lecture implements
 
 ## Setup
