@@ -29,6 +29,15 @@ This repo captures progress through the lectures, implemented step by step in Ju
   - Recounted bigrams, sampled from the count table, and scored NLL
   - Retrained the neural-net version (softmax + L2) and sampled names from it
 
+### `makemore part 2/`
+
+- `names.txt` — same baby-name training data as `makemore/`
+- `building_makemore_mlp_yay.ipynb` — lecture walkthrough of a character-level MLP language model (Bengio et al.):
+  - Context window of 3 previous characters mapped through a learned embedding table
+  - Hidden tanh layer + softmax over the next character, trained with negative log-likelihood
+  - Train / val / test splits, learning-rate search, and sampling names from the trained model
+- `A Neural Probabilistic Language Model.pdf` — Bengio et al. 2003 paper this lecture implements
+
 ## Setup
 
 ```bash
@@ -43,12 +52,13 @@ For Graphviz diagram rendering (micrograd notebooks), install the system Graphvi
 brew install graphviz   # macOS
 ```
 
-Then open a notebook under `micrograd/` or `makemore/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
+Then open a notebook under `micrograd/`, `makemore/`, or `makemore part 2/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
 
 ## Reference
 
 - Course repo: [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero)
 - Lecture 1: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
 - Lecture 2: [The spelled-out intro to language modeling: building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
+- Lecture 3: [Building makemore Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I)
 - Original micrograd repo: [karpathy/micrograd](https://github.com/karpathy/micrograd)
 - Original makemore repo: [karpathy/makemore](https://github.com/karpathy/makemore)
