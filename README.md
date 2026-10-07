@@ -42,6 +42,17 @@ This repo captures progress through the lectures, implemented step by step in Ju
   - Evaluated train and validation loss
 - `A Neural Probabilistic Language Model.pdf` — Bengio et al. 2003 paper this lecture implements
 
+### `makemore part 3/`
+
+- `names.txt` — same baby-name training data as `makemore/`
+- `build_makemore_mlp2.ipynb` — lecture walkthrough of training a deeper MLP by fixing activations and gradients:
+  - Shrink the output weights so the initial softmax is near uniform (loss starts near `log(27)` instead of confidently wrong)
+  - Kaiming init (`gain / sqrt(fan_in)`, tanh gain `5/3`) so hidden tanh units are not saturated at the start
+  - Batch normalization after linear layers, with a running mean and std frozen at inference
+  - Diagnostics for activation histograms, gradient distributions, and the update-to-data ratio
+- `Kaiming Init Paper 2015.pdf` — He et al. 2015, the initialization used for the hidden layers
+- `Batch Normalization paper 2015.pdf` — Ioffe and Szegedy 2015
+
 ## Setup
 
 ```bash
@@ -56,7 +67,7 @@ For Graphviz diagram rendering (micrograd notebooks), install the system Graphvi
 brew install graphviz   # macOS
 ```
 
-Then open a notebook under `micrograd/`, `makemore/`, or `makemore part 2/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
+Then open a notebook under `micrograd/`, `makemore/`, `makemore part 2/`, or `makemore part 3/` in Jupyter or VS Code/Cursor and select the project `venv` kernel.
 
 ## Reference
 
@@ -64,5 +75,6 @@ Then open a notebook under `micrograd/`, `makemore/`, or `makemore part 2/` in J
 - Lecture 1: [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
 - Lecture 2: [The spelled-out intro to language modeling: building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
 - Lecture 3: [Building makemore Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I)
+- Lecture 4: [Building makemore Part 3: Activations, Gradients, BatchNorm](https://www.youtube.com/watch?v=P6sfmUTpUmc)
 - Original micrograd repo: [karpathy/micrograd](https://github.com/karpathy/micrograd)
 - Original makemore repo: [karpathy/makemore](https://github.com/karpathy/makemore)
